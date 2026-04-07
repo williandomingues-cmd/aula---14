@@ -13,8 +13,7 @@ Session = sessionmaker(bind=engine)
 class Curso(Base):
     __tablename__ = "cursos"
     id = Column(Integer, primary_key=True, autoincrement=True)
-    nome = Column(String(100), nullable=False)
-    cargo_horaria = Column(Integer, nullable=False)
+    nome = Column(String(100), nullable=False) = Column(Integer, nullable=False)
 
     alunos = relationship("Aluno", back_populates="cursos")
 

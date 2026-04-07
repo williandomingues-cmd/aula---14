@@ -1,11 +1,11 @@
 # configurar alembic
 
-# inicializar o alibic 
+# inicializar o alebic 
 
 # no terminal:
 # alembic init alembic
 # ou
-# python -m alembic init alembic p
+# python -m alembic init alembic 
 # Configurar a conexão com db
 # -------------------------------------------------------
 # Abra o arquivo: alembic.ini
@@ -20,9 +20,19 @@
 # -------------------------------------------------------
 # abra o arquivo: alembic/env.py
 # importe o base do seu projeto. exemplo:
-# from models import base
+# from models import Base
 
 # depois, encotre a linha:
 # target_metadata = none
 # e alterar para:
-# target_metadata = base.metadata
+# target_metadata = Base.metadata
+
+# criando a migração 
+# -------------------------------------------------------
+# no terminal:
+# python -m alembic revision --autogenerate -m "criando tabelas"
+# e depois aplica a migração no banco
+# no terminal:
+# python -m alembic upgrade head
+
+# As tabelas foram criadas no banco de dados 
